@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="dimensionalinventory"
+version="${file.jarVersion}"
+displayName="DimensionalInventory"
+authors="Zanckor"
+description='''
+This mods allows you to change inventories when player switches dimension. It supports non-vanilla dimensions.
+'''
