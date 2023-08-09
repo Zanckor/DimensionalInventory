@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="dimensionalinventory"
-version="${file.jarVersion}"
+version="1.0.1"
 displayName="DimensionalInventory"
 authors="Zanckor"
 description='''

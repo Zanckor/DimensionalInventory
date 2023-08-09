@@ -8,12 +8,16 @@ public class DimensionGroup {
     public static HashMap<String, Integer> turnConfigToHashMap() {
         HashMap<String, Integer> groups = new HashMap<>();
 
-        DimensionConfig.DIMENSION_LIST.get().forEach(dimensionName -> {
-            int groupIndex = dimensionName.indexOf('_');
-            int groupNumber = Integer.parseInt(dimensionName.substring(0, groupIndex));
+        //Split the string into groups
+        for (String groupStrings : DimensionConfig.DIMENSION_LIST.get().split(", ")) {
+            String[] parts = groupStrings.split("=");
+            int groupNumber = Integer.parseInt(parts[1]);
+            String dimensionName = parts[0];
 
-            groups.put(dimensionName.substring(groupIndex + 1), groupNumber);
-        });
+            groups.put(dimensionName, groupNumber);
+        }
+
+        System.out.println(groups);
 
         return groups;
     }
